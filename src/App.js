@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
+import Todos from './components/Todos';
 
 class App extends Component {
   state = {
@@ -9,7 +10,7 @@ class App extends Component {
   // Appel de la méthode effectuant la requête Ajax
   componentDidMount() {
     this.getTodos()
-      .then(res => res.json())
+      .then(res => res.json()) // convertie la réponse en json
       .then(data => {
         this.setState({
           todos: data
@@ -24,13 +25,14 @@ class App extends Component {
   }
   
   render() {
-    console.log(this.state.todos);
+    //console.log(this.state.todos);
      
     return ( 
       <div className="App">
         <header className="App-header">
         Le routage
         </header>
+        <Todos todos={ this.state.todos } />
       </div>
      );
   }
