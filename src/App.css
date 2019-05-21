@@ -16,3 +16,15 @@
 ul {
   list-style-type: none;
 }
+
+.todos {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.todo {
+  flex: 1 1 120px;
+  min-height: 120px;
+  border: 2px solid #282c34;
+  margin-right: 5px;
+}
