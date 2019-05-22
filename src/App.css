@@ -27,6 +27,15 @@ ul {
   min-height: 120px;
   border: 2px solid #282c34;
   margin-right: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-bottom: 5px;
+}
+
+.todo-link {
+  background-color: #282c34;
+  align-content: flex-start;
 }
 
 a:link {
