@@ -4,6 +4,7 @@ import Todos from './components/Todos';
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 import Contact from './components/Contact';
 import About from './components/About';
+import TodoDetails from './components/TodoDetails';
 
 
 class App extends Component {
@@ -42,11 +43,14 @@ class App extends Component {
           </header>
 
           {/*routage dans le cas d'un component qui a besoin d'une prop*/}
-          <Route path="/todos" render={() => (
+          <Route exact path="/todos" render={() => (
             <Todos todos={this.state.todos} />
           )} />
+          {/*routage dans le cas d'un component sans prop*/}
           <Route path="/about" component={About} />
           <Route path="/contact" component={Contact} />
+          {/*Routage avec paramètre dynamique*/}
+          <Route path="/todos/:id" component={TodoDetails} />
         </Router>
 
       </div>
