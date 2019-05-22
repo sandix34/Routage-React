@@ -1,8 +1,10 @@
 import React from 'react';
 
-const TodoDetails = (props) => {
+const TodoDetails = ({match}) => {
+    console.log(match.params);
+    
     return ( 
-        <div>details</div>
+        <div>details de {match.params.id}</div>
      );
 }
  
