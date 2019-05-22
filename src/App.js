@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 import Todos from './components/Todos';
-import { BrowserRouter as Router, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 import Contact from './components/Contact';
 import About from './components/About';
 
@@ -27,28 +27,32 @@ class App extends Component {
   getTodos() {
     return fetch('https://jsonplaceholder.typicode.com/todos');
   }
-  
+
   render() {
     //console.log(this.state.todos);
-     
-    return ( 
+
+    return (
       <div className="App">
-        <header className="App-header">
-        Le routage
-        </header>
         <Router>
+          <header className="App-header">
+            Le routage
+            <Link to='/todos'> A faire</Link>
+            <Link to='/about'> A propos</Link>
+            <Link to='/contact'> Contact</Link>
+          </header>
+
           {/*routage dans le cas d'un component qui a besoin d'une prop*/}
           <Route path="/todos" render={() => (
-            <Todos todos={ this.state.todos } />
+            <Todos todos={this.state.todos} />
           )} />
           <Route path="/about" component={About} />
           <Route path="/contact" component={Contact} />
         </Router>
-        
+
       </div>
-     );
+    );
   }
 }
- 
+
 export default App;
 
