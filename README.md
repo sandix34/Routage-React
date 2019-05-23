@@ -1,3 +1,11 @@
+### Ce projet  a été réalisé dans le cadre de la formation e-learning "Devenir opérationnel en React Volume 3" proposé par [CodeConcept](https://codeconcept.teachable.com/)  :fr: 
+
+## Fonctionnalités du projet
+
+- Application qui récupère une Todo liste à partir d'une API
+
+![routageReact](https://user-images.githubusercontent.com/44428775/58252602-cc588400-7d66-11e9-9181-b27f925d106f.gif)
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
